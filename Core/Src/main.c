@@ -199,7 +199,7 @@ uint8_t arr[100] = {0,};
  adcarr[0] = HAL_ADC_GetValue(&hadc1);
  // sprintf(arr,"%d\n\r",adcarr[0]);
  //HAL_UART_Transmit(&huart1, arr, 5, 10);
-/*
+
  HAL_ADC_Start(&hadc1);
  HAL_ADC_PollForConversion(&hadc1, 20);
  adcarr[1] = HAL_ADC_GetValue(&hadc1);
@@ -211,7 +211,7 @@ uint8_t arr[100] = {0,};
  HAL_ADC_Start(&hadc1);
  HAL_ADC_PollForConversion(&hadc1, 20);
  adcarr[3] = HAL_ADC_GetValue(&hadc1);
-*/
+
  maxchannel = adcarr[0] > adcarr[1] ? 0 : 1;
  maxchannel = adcarr[maxchannel] > adcarr[2] ? maxchannel : 2;
  maxchannel = adcarr[maxchannel] > adcarr[3] ? maxchannel : 3;
@@ -632,7 +632,7 @@ static void MX_TIM2_Init(void)
   htim2.Init.Prescaler = 0;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 79999;
-  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV4;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
   {
