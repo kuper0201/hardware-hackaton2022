@@ -1,0 +1,24 @@
+#include "main.h"
+  
+  
+  void motor_basic_setting(void)
+  {
+  	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
+	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
+	
+	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
+	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
+	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
+	
+	
+	uint16_t  Step_1 = 0 ,
+		   	  Step_2 = 800 * 20,
+		      Step_3 = 800 * 45;
+
+ 	 uint32_t Step_4 = 800 * 99;
+ }
+  
+  
